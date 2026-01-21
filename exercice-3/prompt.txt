@@ -1,0 +1,1 @@
+Rédiges un tableau markdown (à l'aide de caractères) contenant 5 liens de ressources en langue française dont la date de publication est ultérieure à 2021 et qui traite de l'implémentation de la programmation orientée objet en JavaScript Vanilla

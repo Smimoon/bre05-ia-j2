@@ -1,0 +1,29 @@
+<form id="inscription" aria-labelledby="form-title">
+    <h2 id="form-title">Formulaire d'inscription</h2>
+
+    <div class="form-group">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required aria-required="true" placeholder="Votre nom">
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required aria-required="true" placeholder="Votre email">
+    </div>
+
+    <button type="submit" form="inscription">Envoyer</button>
+</form>
+Améliorations apportées :
+
+Balise <form> : Encapsule les champs pour une meilleure sémantique et gestion de la soumission.
+Balises <label> : Associent clairement chaque champ à son étiquette, essentiel pour l’accessibilité (clic sur le label = focus sur le champ).
+Attributs name : Permettent l’envoi des données côté serveur.
+Attributs required et aria-required : Indiquent que les champs sont obligatoires, pour les navigateurs et les technologies d’assistance.
+Attribut type="submit" : Pour le bouton, afin de déclencher la soumission du formulaire.
+Structure sémantique : Groupement des champs avec des <div> pour une meilleure organisation visuelle et logique.
+Accessibilité : Utilisation de aria-labelledby pour lier le titre au formulaire, et aria-required pour renforcer l’indication d’obligation.
+document.getElementById('inscription').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Logique de validation et d'envoi ici
+    alert('Formulaire soumis !');
+});

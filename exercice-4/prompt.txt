@@ -1,0 +1,7 @@
+Corriges moi ce code HTML pour le rendre fonctionnel tout en le faisant correspondre aux standards modernes d'accessibilité :
+<div>
+    <h2>Formulaire d'inscription</h2>
+    <input type="text" id="nom" placeholder="Votre nom">
+    <input type="email" id="email" placeholder="Votre email">
+    <button onclick="submitForm()">Envoyer</button>
+</div>

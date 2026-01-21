@@ -1,0 +1,24 @@
+Vulnérabilité majeure : Injection SQL
+
+Problème : Le code insère directement $_GET['user_id'] dans la requête SQL sans aucune validation ni échappement. Un utilisateur malveillant peut injecter du code SQL via l'URL (ex: ?user_id=1; DROP TABLE users;).
+Solution : Utiliser des requêtes préparées avec mysqli_prepare ou PDO :
+$stmt = $conn->prepare("SELECT * FROM users WHERE id = ?");
+$stmt->bind_param("i", $user_input);
+$stmt->execute();
+$result = $stmt->get_result();
+Problèmes dans le code JavaScript
+Vulnérabilité XSS (Cross-Site Scripting) par rebond
+
+Problème : La variable id est insérée directement dans l'URL sans validation ni encodage. Si id provient d'une source non fiable (ex: document.location.hash), un attaquant pourrait injecter du code malveillant (ex: traitement.php?user_id=<script>...</script>).
+Solution : Valider et encoder id avec encodeURIComponent(id).
+Absence de gestion d'erreur
+
+Problème : Le code ne vérifie pas si la requête a réussi (response.ok). En cas d'erreur HTTP (404, 500), le .json() échouera silencieusement.
+Solution : Ajouter une vérification : 
+fetch(url)
+  .then(response => {
+    if (!response.ok) throw new Error('Erreur réseau');
+    return response.json();
+  })
+  .then(data => console.log(data))
+  .catch(error => console.error('Erreur:', error));

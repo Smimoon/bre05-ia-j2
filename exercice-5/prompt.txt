@@ -1,0 +1,14 @@
+Tu es expert dans le langage de programmation PhP, peux-tu identifier et m'expliquer, de manière concise, le problème dans ce code :
+
+<?php
+$user_input = $_GET['user_id']; $query = "SELECT * FROM users WHERE id = $user_input"; $result = mysqli_query($conn, $query); echo "Utilisateur trouvé : " . $user_input;
+?>
+
+Tu es expert dans le langage de programmation JavaScript, peux-tu identifier et m'expliquer, de manière concise, le problème dans ce code : 
+
+function fetchData(id) {
+    const url = 'traitement.php?user_id=' + id;
+    fetch(url)
+      .then(response => response.json())
+      .then(data => console.log(data));
+}

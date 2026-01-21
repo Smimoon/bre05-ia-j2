@@ -1,0 +1,3 @@
+Rédiges moi un tableau au format Markdown qui classe les présidents de la 5ème république française en fonction de leur résultat au second tour de l'élection présidentielle, dans un ordre décroissant (en % de suffrages exprimés).
+Peux-tu le refaire en format markdown (à l'aide de caractères) et en te basant sur le chiffre du pourcentage des suffrages exprimés ?
+Parfait, tu a encore quelques erreurs sur l'ordre décroissant, analyse bien les chiffres pour les ranger dans le bon ordre.
